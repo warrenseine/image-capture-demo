@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <title>Image Capture demo</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Take a Photo</h2>
+      <label>
+        Camera:
+        <select id="cameraSelect"></select>
+      </label>
+      <div>
+        <button id="startCameraBtn">Start Camera</button>
+        <button id="takePhotoBtn">Take Photo</button>
+      </div>
+      <div class="grid">
+        <div id="photoCapabilities" class="info"></div>
+        <div id="photoSettings" class="info"></div>
+        <div id="photoInfo" class="info"></div>
+      </div>
+      <video muted autoplay="autoplay" playsinline="playsinline"></video>
+      <img id="photoTaken" />
+    </div>
+
+    <style>
+      .container {
+        width: 800px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .grid {
+        display: grid;
+        gap: 32px;
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      video {
+        display: none;
+        max-width: 100%;
+      }
+
+      #photoTaken {
+        max-width: 100%;
+      }
+
+      .info {
+        white-space: pre-wrap;
+        font-family: monospace;
+        text-align: left;
+      }
+    </style>
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>
